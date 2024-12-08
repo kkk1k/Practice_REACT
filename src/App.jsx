@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import FirstChild from "./FirstChild";
 import SecondChild from "./SecondChild";
+import SocketComponent from "./SocketComponent";
 
 function App() {
   const [firstValue, setFirstValue] = useState(null);
@@ -22,6 +23,7 @@ function App() {
     <div>
       <FirstChild value={firstValue}></FirstChild>
       <SecondChild item={memorizedItem}></SecondChild>
+      <SocketComponent />
     </div>
   );
 }
