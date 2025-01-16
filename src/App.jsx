@@ -1,32 +1,14 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import FirstChild from "./FirstChild";
-import SecondChild from "./SecondChild";
-import SocketComponent from "./SocketComponent";
-import SseComponent from "./SseComponent";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Ref from "./Ref";
+import Home from "./Home";
 
 function App() {
-  const [firstValue, setFirstValue] = useState(null);
-
-  const item = {
-    name: "Kim",
-    age: "27",
-  };
-
-  const memorizedItem = useMemo(() => item, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setFirstValue("ChangedValue");
-    }, 3000);
-  }, []);
-
   return (
-    <div>
-      <FirstChild value={firstValue}></FirstChild>
-      <SecondChild item={memorizedItem}></SecondChild>
-      <SocketComponent />
-      <SseComponent />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/ref" element={<Ref />} />
+    </Routes>
   );
 }
 
