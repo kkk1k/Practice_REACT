@@ -4,6 +4,7 @@ import Ref from "./Ref";
 import Home from "./Home";
 import SseComponent from "./SseComponent";
 import SocketComponent from "./SocketComponent";
+import Reducer from "./Reducer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/ref" element={<Ref />} />
       <Route path="/sse" element={<SseComponent />} />
       <Route path="/socket" element={<SocketComponent />} />
+      <Route path="/reducer" element={<Reducer />} />
     </Routes>
   );
 }
