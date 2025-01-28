@@ -1,8 +1,6 @@
 import { useCallback, useEffect, useMemo, useState, useRef } from "react";
 import FirstChild from "./FirstChild";
 import SecondChild from "./SecondChild";
-import SocketComponent from "./SocketComponent";
-import SseComponent from "./SseComponent";
 
 function Home() {
   const [firstValue, setFirstValue] = useState(null);
@@ -23,8 +21,6 @@ function Home() {
     <div>
       <FirstChild value={firstValue}></FirstChild>
       <SecondChild item={memorizedItem}></SecondChild>
-      {/* <SocketComponent /> */}
-      {/* <SseComponent /> */}
     </div>
   );
 }
